@@ -10,39 +10,38 @@
             margin: 0;
             padding: 0;
             height: 100%;
-            background-color: #001E1C; /* Dark background color */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-family: Arial, sans-serif;
-            flex-direction: column; /* Align items vertically */
+            background-color: #002524; /* Dark background color */
+            display: flex; /* Flexbox for centering */
+            flex-direction: column; /* Stack elements vertically */
+            justify-content: center; /* Center vertically */
+            align-items: center; /* Center horizontally */
+            text-align: center; /* Center text for safety */
+            font-family: Arial, sans-serif; /* Font family */
             overflow: hidden; /* Prevent scrollbars */
         }
 
-        /* Header styling */
-        h1 {
-            color: white; /* White text */
-            text-align: center; /* Center the text */
-            margin-bottom: 20px; /* Space between header and image */
-            position: absolute;
-            z-index: 1; /* Ensure header is above the image */
-            width: 100%;
-            top: 20%; /* Adjust position of the header vertically */
+        /* Image styling */
+        .logo {
+            max-width: 100%; /* Image fits viewport width */
+            max-height: 50%; /* Image takes up to 50% viewport height */
+            object-fit: contain; /* Preserve aspect ratio */
+            margin-bottom: 20px; /* Space between the image and text */
         }
 
-        /* Make image fill the entire screen */
-        .logo {
-            width: 100vw; /* Set image width to 100% of viewport width */
-            height: 100vh; /* Set image height to 100% of viewport height */
-            object-fit: cover; /* Ensure the image covers the screen while preserving its aspect ratio */
-            position: absolute;
-            top: 0;
-            left: 0;
+        /* Styling for the text below the image */
+        .coming-soon {
+            color: white; /* White font color */
+            font-size: 1.5rem; /* Slightly larger font */
+            margin: 0; /* Remove default margins */
         }
     </style>
 </head>
 <body>
-    <img src="2s_capital.png" alt="2S Capital Logo" class="logo"> <!-- Full-screen image -->
+    <!-- Centered and responsive logo -->
+    <img src="2s_capital.png" alt="2S Capital Logo" class="logo">
+    <!-- Centered text -->
+    <p class="coming-soon">COMING SOON</p>
 </body>
 </html>
+
 
