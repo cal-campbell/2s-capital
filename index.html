@@ -38,6 +38,31 @@
       text-shadow: 
         2px 2px 0px rgba(250, 250, 250, 0.2),
         -2px -2px 0px rgba(0, 0, 0, 0.2);
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+    }
+
+    .brand-box {
+      border: 2px solid #FAFAFA;
+      padding: 0.8rem;
+      line-height: 1;
+      aspect-ratio: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 2.2em;
+      min-height: 2.2em;
+      box-sizing: border-box;
+      letter-spacing: 0.05em;
+      position: relative;
+      transform: translateX(0.05em);
+      background-color: #FAFAFA;
+      color: #002524;
+    }
+
+    .brand > .brand-box {
+      margin-right: -0.15em;
     }
 
     .diagonal-line {
@@ -62,18 +87,47 @@
       transform-origin: bottom left;
     }
 
+    .email {
+      position: absolute;
+      bottom: 2rem;
+      color: #FAFAFA;
+      font-size: 1rem;
+      font-family: 'Montserrat', sans-serif;
+      opacity: 0.9;
+      text-decoration: none;
+    }
+
+    .email span {
+      opacity: 0.7;
+    }
+
+    .email:hover {
+      opacity: 1;
+    }
+
     @media (max-width: 600px) {
       .brand {
         font-size: 2.5rem;
         letter-spacing: 0.1em;
+        gap: 1rem;
+      }
+      .brand-box {
+        min-width: 2em;
+        min-height: 2em;
+        padding: 0.6rem;
+      }
+      .email {
+        font-size: 0.9rem;
+        bottom: 1.5rem;
       }
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <div class="brand">2S Capital</div>
+    <div class="brand"><span class="brand-box">2S</span> Capital</div>
     <div class="diagonal-line"></div>
+    <a href="mailto:callum@2s.capital" class="email"><span>contact: </span>callum@2s.capital</a>
   </div>
 </body>
 </html>
