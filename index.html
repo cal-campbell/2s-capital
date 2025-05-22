@@ -1,47 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>2S Capital</title>
-    <style>
-        /* Reset margin and body */
-        body, html {
-            margin: 0;
-            padding: 0;
-            height: 100%;
-            background-color: #002524; /* Dark background color */
-            display: flex; /* Flexbox for centering */
-            flex-direction: column; /* Stack elements vertically */
-            justify-content: center; /* Center vertically */
-            align-items: center; /* Center horizontally */
-            text-align: center; /* Center text for safety */
-            font-family: Arial, sans-serif; /* Font family */
-            overflow: hidden; /* Prevent scrollbars */
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>2S Capital</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      background-color: #002524;
+      height: 100%;
+      width: 100%;
+      font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+    }
 
-        /* Image styling */
-        .logo {
-            max-width: 40%; /* Image fits viewport width */
-            max-height: 20%; /* Image takes up to 50% viewport height */
-            object-fit: contain; /* Preserve aspect ratio */
-            margin-bottom: 20px; /* Space between the image and text */
-        }
+    .container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      position: relative;
+      overflow: hidden;
+    }
 
-        /* Styling for the text below the image */
-        .contact {
-            color: white; /* White font color */
-            font-size: 1.0rem; /* Slightly larger font */
-            margin: 0; /* Remove default margins */
-        }
-    </style>
+    .brand {
+      color: #FAFAFA;
+      font-size: 3.5rem;
+      font-weight: 700;
+      text-align: center;
+      z-index: 1;
+      font-family: 'Montserrat', sans-serif;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      text-shadow: 
+        2px 2px 0px rgba(250, 250, 250, 0.2),
+        -2px -2px 0px rgba(0, 0, 0, 0.2);
+    }
+
+    .diagonal-line {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+    }
+
+    .diagonal-line::before {
+      content: '';
+      position: absolute;
+      bottom: -50vh;
+      left: 25%;
+      width: 200%;
+      height: 2px;
+      background-color: #FAFAFA;
+      transform: rotate(-45deg);
+      transform-origin: bottom left;
+    }
+
+    @media (max-width: 600px) {
+      .brand {
+        font-size: 2.5rem;
+        letter-spacing: 0.1em;
+      }
+    }
+  </style>
 </head>
 <body>
-    <!-- Centered and responsive logo -->
-    <img src="2s_capital.png" alt="2S Capital Logo" class="logo">
-    <!-- Centered text -->
-    <p class="contact">hello@2s.capital</p>
+  <div class="container">
+    <div class="brand">2S Capital</div>
+    <div class="diagonal-line"></div>
+  </div>
 </body>
 </html>
-
-
